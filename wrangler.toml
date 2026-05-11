@@ -1,0 +1,36 @@
+# ============================================================
+# TELECARD CLOUDFLARE WORKER CONFIGURATION
+# File: wrangler.toml (root of your project)
+# ============================================================
+
+name       = "telecard"
+main       = "worker/index.js"
+compatibility_date = "2024-01-01"
+
+# ============================================================
+# CRON TRIGGERS
+# Heartbeat runs every 3 days to keep Supabase alive
+# ============================================================
+[triggers]
+crons = ["0 0 */3 * *"]
+
+# ============================================================
+# ENVIRONMENT VARIABLES
+# Non-secret config lives here.
+# Secrets are added via Cloudflare dashboard (never in this file).
+# ============================================================
+[vars]
+ENVIRONMENT = "production"
+BOT_USERNAME = "@SaleTube_bot"        # ← replace with your bot's @username (no @)
+
+# ============================================================
+# SECRETS (DO NOT put values here — add via dashboard)
+# Run these commands once in Codespaces terminal:
+#
+#   npx wrangler secret put TELEGRAM_BOT_TOKEN
+#   npx wrangler secret put SUPABASE_URL
+#   npx wrangler secret put SUPABASE_SERVICE_KEY
+#   npx wrangler secret put GEMINI_API_KEY
+#
+# Wrangler will prompt you to paste the value securely.
+# ============================================================
