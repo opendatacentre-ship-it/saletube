@@ -3,7 +3,7 @@
 # File: wrangler.toml (root of your project)
 # ============================================================
 
-name = "saletube"
+name       = "saletube"
 main       = "worker/index.js"
 compatibility_date = "2024-01-01"
 
