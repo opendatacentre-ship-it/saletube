@@ -21,7 +21,7 @@ crons = ["0 0 */3 * *"]
 # ============================================================
 [vars]
 ENVIRONMENT = "production"
-BOT_USERNAME = "@SaleTube_bot"        # ← replace with your bot's @username (no @)
+BOT_USERNAME = "SaleTube_bot"        # ← replace with your bot's @username (no @)
 
 # ============================================================
 # SECRETS (DO NOT put values here — add via dashboard)
